@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins:wght@400;500&display=swap");
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*----------------------------------------------------*/
+.header__container {
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.header__head {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  align-items: center;
+}
+.header__logo {
+}
+.header__text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+}
+@media (max-width: 768px) {
+  .header__head {
+    flex-direction: column;
+  }
+  .header__logo {
+    padding: 0 100px;
+    padding-bottom: 20px;
+  }
+  .header__logo img {
+    width: 360px;
+    height: auto;
+  } /*
+  .header__text {
+    font-size: 16px;
+  } */
+}
+@media (max-width: 425px) {
+  .header__logo img {
+  }
+  .header__logo {
+    padding: 0 70px;
+    padding-bottom: 10px;
+  }
+}
+/*--------------------------------------------------*/
+.page {
+}
+.page__home {
+}
+.home {
+}
+.home__body {
+  background: url(../img/home/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 215px;
+  padding-bottom: 215px;
+}
+.page__container {
+}
+.container {
+}
+.home__image {
+  display: flex;
+  justify-content: center;
+  padding: 0 100px;
+}
+@media (max-width: 768px) {
+  .home__image {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 425px) {
+  .home__image {
+    padding: 0 30px;
+  }
+}
+/*------------------------------------------------------*/
+.page__real {
+}
+.real {
+}
+.real__container {
+}
+.container {
+}
+.real__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.real__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+}
+.real__text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+}
+@media (max-width: 768px) {
+  .real__body {
+    flex-direction: column;
+  }
+  .real__title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    padding: 0 30px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+}
+/*---------------------------------------------------------*/
+.page__social {
+}
+.social {
+}
+.social__body {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+.social__list {
+  display: flex;
+  justify-content: center;
+}
+.social__list > a {
+  margin-right: 30px;
+}
+/*-------------------------------------------------------------*/
+.footer {
+}
+.footer__container {
+}
+.container {
+}
+.footer__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.footer__mail {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+}
+.footer__copyright {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+}
+@media (max-width: 768px) {
+  .footer__body {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 30px;
+  }
+  .footer__mail {
+    padding-bottom: 20px;
+  }
+  .footer__copyright {
+    line-height: 120%;
+  }
+}
